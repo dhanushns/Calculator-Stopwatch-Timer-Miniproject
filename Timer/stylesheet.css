@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #0e1538;
+}
+
+nav{
+
+    position: relative;
+    margin: 50px 600px auto;
+    width: 350px;
+    height: 50px;
+    background:white;
+    border-radius: 8px;
+    border: none;
+    font-size: 0;
+    box-shadow: inset 5px 5px 12px rgba(0,0,0,.16);
+}
+
+.calculatorText{
+    padding-left:10px;
+  }
+  
+.stopWatchText{
+    padding-left:30px;
+}
+  
+.timerText{
+    padding-left: 20px;
+}
+
+nav a{
+
+    font-size: 18px;
+    font-family:Andale Mono, monospace;
+    color: black;
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;  
+}
+
+nav .animation{
+
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    background: rgb(252, 252, 0);
+    border-radius: 8px;
+    border: none;
+    box-shadow: inset -5px -5px 12px rgba(0,0,0,.20);
+    transition: all .5s ease 0s;
+}
+
+nav a:nth-child(1) {
+    width: 120px;
+}
+
+nav a:nth-child(1):hover~.animation{
+    width: 130px;
+    left: 0;
+    background-color: yellow;
+}
+  
+nav a:nth-child(2) {
+    width: 120px;
+}
+  
+nav a:nth-child(2):hover~.animation {
+    width: 120px;
+    left: 135px;
+    background-color: cyan;
+}
+  
+nav a:nth-child(3) {
+    width: 110px;
+}
+  
+nav .start-home,a:nth-child(3):hover~.animation{
+    width: 100px;
+    left: 250px;
+    background-color: lightgrey;
+}
+.outerCircle{
+
+    width: 400px;
+    height: 400px;
+    margin-top: 70px;
+    background: none;
+    box-shadow: 0 0 10px #2196f3,0 0 40px #2196f3, 0 0 80px #2196f3; 
+    border-radius: 50%;
+}
+
+.innerCircle{
+
+    position:absolute;
+    width: 350px;
+    height: 350px;
+    margin-top:80px;
+    border: 5px solid orange;
+    box-shadow: 0 0 10px orange, 0 0 10px orange, 0 0 10px orange; 
+    border-radius: 50%;
+}
+
+.innerCircle p{
+
+    position:absolute;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-size:50px;
+    padding-left:160px;
+    padding-top:140px;
+}
+
+.innerCircle h1{
+
+    position: absolute;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size:80px;
+    color:white;
+    padding-left:40px;
+    padding-top: 120px;
+}
+
+#play {
+
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-top: 20px;
+}
+
+#pause {
+    width : 50px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+#restart {
+    width : 50px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 60px;
+}
+
+
+input:hover {
+
+    background-color:transparent;
+    box-shadow: 0 0 10px #2196f3,0 0 40px #2196f3, 0 0 80px #2196f3;
+}

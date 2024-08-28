@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background:#0e1538;
+}
+
+nav{
+
+    position: relative;
+    margin: 50px 600px auto;
+    width: 350px;
+    height: 50px;
+    background:white;
+    border-radius: 8px;
+    border: none;
+    font-size: 0;
+    box-shadow: inset 5px 5px 12px rgba(0,0,0,.16);
+}
+
+.calculatorText{
+    padding-left:10px;
+  }
+  
+.stopWatchText{
+    padding-left:30px;
+}
+  
+.timerText{
+    padding-left: 20px;
+}
+  
+nav a{
+
+    font-size: 18px;
+    font-family:Andale Mono, monospace;
+    color: black;
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;  
+}
+
+nav .animation{
+
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    background: rgb(252, 252, 0);
+    border-radius: 8px;
+    border: none;
+    box-shadow: inset -5px -5px 12px rgba(0,0,0,.20);
+    transition: all .5s ease 0s;
+}
+
+nav a:nth-child(1) {
+    width: 120px;
+}
+
+nav a:nth-child(1):hover~.animation{
+    width: 130px;
+    left: 0;
+    background-color: yellow;
+}
+  
+nav a:nth-child(2) {
+    width: 120px;
+}
+  
+nav .start-home, a:nth-child(2):hover~.animation {
+    width: 120px;
+    left: 135px;
+    background-color: cyan;
+}
+  
+nav a:nth-child(3) {
+    width: 110px;
+  }
+  
+  nav a:nth-child(3):hover~.animation{
+    width: 100px;
+    left: 250px;
+    background-color: lightgrey;
+  }
+
+.face{
+
+    position: relative;
+    margin-top: 50px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    overflow: hidden;
+}
+
+.face::before{
+
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 500px;
+    background: linear-gradient(#00ccff,#d400d4);
+    animation: animate 3s linear infinite;
+}
+
+.face::after {
+
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #0e1538;
+    border-radius: 60px;
+}
+
+@keyframes animate {
+
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+    
+}
+
+.face h2{
+
+    position: relative;
+    color: white;
+    font-size:50px;
+    z-index: 10;
+}
+
+.buttons{
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+button.reset{
+    width: 100px;
+    padding: center;
+    margin-left: 80px;
+}
+
+button.lap{
+    padding: center;
+    margin-left: 80px;
+}
+
+button{
+
+    position: relative;
+    display: inline-block;
+    color:#2196f3;
+    border: none;
+    background: none;
+    width: 100px;
+    height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+button:hover {
+
+    color: #255784;
+    background: #2196f3;
+    width: 120px;
+    height: 60px;
+    padding:center;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #2196f3,0 0 40px #2196f3, 0 0 80px #2196f3;
+}
+
+#displayLap{
+
+    font-size: 25px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+    padding-left: 40px;
+    color: white;
+}

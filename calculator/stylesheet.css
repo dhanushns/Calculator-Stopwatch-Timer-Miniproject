@@ -1,0 +1,198 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+body{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background:#0e1538;
+}
+
+nav{
+
+  position: relative;
+  margin: 50px 600px auto;
+  width: 350px;
+  height: 50px;
+  background:white;
+  border-radius: 8px;
+  border: none;
+  font-size: 0;
+  box-shadow: inset 5px 5px 12px rgba(0,0,0,.16);
+}
+
+.calculatorText{
+  padding-left:10px;
+}
+
+.stopWatchText{
+  padding-left:30px;
+}
+
+.timerText{
+  padding-left: 20px;
+}
+
+nav a{
+
+  font-size: 18px;
+  font-family:Andale Mono, monospace;
+  color: black;
+  text-decoration: none;
+  line-height: 50px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  text-align: center;  
+}
+
+nav .animation{
+
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  background: rgb(252, 252, 0);
+  border-radius: 8px;
+  border: none;
+  box-shadow: inset -5px -5px 12px rgba(0,0,0,.20);
+  transition: all .5s ease 0s;
+}
+
+nav a:nth-child(1) {
+  width: 120px;
+}
+
+nav .start-home, a:nth-child(1):hover~.animation{
+  width: 130px;
+  left: 0;
+  background-color: yellow;
+}
+
+nav a:nth-child(2) {
+  width: 120px;
+}
+
+nav a:nth-child(2):hover~.animation {
+  width: 120px;
+  left: 135px;
+  background-color: cyan;
+}
+
+nav a:nth-child(3) {
+  width: 110px;
+}
+
+nav a:nth-child(3):hover~.animation{
+  width: 100px;
+  left: 250px;
+  background-color: lightgrey;
+}
+
+.container{
+  
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.calculator{
+
+  background-color: white;
+  padding: 15px;
+  border-radius: 30px;
+  box-shadow: inset 5px 5px 12px #ffffff,
+                    5px 5px 12px rgba(0,0,0,.16);
+  display: grid;
+  grid-template-columns: repeat(4,70px);
+}
+
+input{
+
+  grid-column: span 4;
+  height: 150px;
+  width: 276px;
+  background-color: #ecf0f3;
+  color: rgba(0,0,0,.50);
+  box-shadow: inset -5px -5px 12px #ffffff,inset 5px 5px 12px rgba(0,0,0,.20);
+  border: none;
+  border-radius: 30px;
+  font-size: 50px;
+  text-align: end;
+  padding-right: 5px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+button{
+
+  position: relative;
+  height: 50px;
+  width: 50px;
+  background-color: #ecf0f3;
+  box-shadow: -5px -5px 12px #ffffff,5px 5px 12px rgba(0,0,0,.16);
+  border: none;
+  border-radius: 50%;
+  margin: 8px;
+}
+
+button:hover{
+
+  box-shadow: inset -5px -5px 12px #ffffff,inset 5px 5px 12px rgba(0,0,0,.16);
+}
+
+button.equal{
+
+  width: 120px;
+  border-radius: 50px;
+  margin-left: 10px;
+  font-size: 25px;
+  box-shadow: inset 0 0 0 0 rgb(144,238,144);
+  transition: ease-out 0.3s;
+  outline: none;
+}
+
+button.equal:hover{
+
+  box-shadow: inset 120px 0 0 0 rgb(144,238,144);
+}
+
+button.delete{
+
+  box-shadow: inset 0 0 0 0 rgb(255,0,0);
+  transition: ease-out 0.3s;
+}
+
+button.delete:hover{
+
+  box-shadow: inset 50px 0 0 0 rgb(255,0,0);
+}
+
+button.clear{
+
+  box-shadow: inset 0 0 0 0 rgb(0,255,0);
+  transition: 0.3s;
+}
+
+button.clear:hover{
+
+  box-shadow: inset 50px 0 0 0 rgb(0,255,0);
+}
+
+.dot{
+
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+::placeholder{
+  color: rgba(0,0,0,.50);
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <meta http-equiv = "X-UA-Compatible" content = "IE-edge">
+  <meta name = "description" content = "calculator">
+  <link rel = "stylesheet" href="stylesheet.css">
+  <title>calculator</title>
+</head>
+
+<body>
+  <nav>
+    <a href="#" class = "calculatorText">Calculator</a>
+    <a href="../stopwatch/index.html" class = "stopWatchText">Stopwatch</a>
+    <a href="../Timer/index.html" class = "timerText">Timer</a>
+    <div class = "animation start-home"></div>
+  </nav>
+  <div class = "container">
+    <div class = "calculator">
+      <input type = "text" placeholder = "0" id = "output">
+      <button type = "button" onclick = "allClear()" class = "clear">AC</button>
+      <button type = "button" onclick = "del()" class = "delete">DEL</button>
+      <button type = "button" onclick = "display('%')">%</button>
+      <button type = "button" onclick = "display('/')">/</button>
+      <button type = "button" onclick = "display(7)">7</button>
+      <button type = "button" onclick = "display(8)">8</button>
+      <button type = "button" onclick = "display(9)">9</button>
+      <button type = "button" onclick = "display('+')">+</button>
+      <button type = "button" onclick = "display(4)">4</button>
+      <button type = "button" onclick = "display(5)">5</button>
+      <button type = "button" onclick = "display(6)">6</button>
+      <button type = "button" onclick = "display('-')">-</button>
+      <button type = "button" onclick = "display(1)">1</button>
+      <button type = "button" onclick = "display(2)">2</button>
+      <button type = "button" onclick = "display(3)">3</button>
+      <button type = "button" onclick = "display('*')">*</button>
+      <button type = "button" onclick = "display('.')" class = "dot">.</button>
+      <button type = "button" onclick = "display(0)">0</button>
+      <button type = "button" onclick = "solve()" class = "equal">=</button>
+    </div>
+  </div>
+
+  <script>
+    let outputScreen = document.getElementById('output');
+
+    function display(num){
+      outputScreen.value += num;
+    }
+
+    function solve(){
+      try{
+        outputScreen.value = eval(outputScreen.value);
+      }
+      catch(err){
+        alert("Invalid");
+        outputScreen.value = "";
+      }
+    }
+
+    function allClear(){
+      outputScreen.value = "";
+    }
+
+    function del(){
+      outputScreen.value = outputScreen.value.slice(0,-1);
+    }
+
+  </script>
+
+</body>
+
+</html>
